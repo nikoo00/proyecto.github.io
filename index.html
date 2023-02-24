@@ -1,0 +1,99 @@
+
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Ejercicio Prueba</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+      
+      <header>
+      </header>
+
+          <section>
+          </section>
+
+          <script>
+
+              const header = document.querySelector('header');
+              const section = document.querySelector('section');
+
+              const requestURL = 'Json.json';
+              const request = new XMLHttpRequest();
+
+              request.open('GET', requestURL);
+              request.responseType = 'json';
+              request.send();
+
+              request.onload = function () {
+                  const superHeroes = request.response;
+                  populateHeader(pruebaJD);
+                  showHeroes(pruebaJD);
+              }
+
+
+              function populateHeader(jsonObj) {
+                  const myH1 = document.createElement('h1');
+                  myH1.textContent = jsonObj['titulo'];
+                  header.appendChild(myH1);
+
+                  const myPara = document.createElement('p');
+                  myPara.textContent = 'Tema: ' + jsonObj['Tema'];
+                  header.appendChild(myPara);
+              }
+
+              function showHeroes(jsonObj) {
+                  const heroes = jsonObj['members'];
+
+                  for (var i = 0; i < heroes.length; i++) {
+                      const myArticle = document.createElement('article');
+                      const myH2 = document.createElement('h2');
+                      const myPara1 = document.createElement('p');
+                      const myPara2 = document.createElement('p');
+                      const myPara3 = document.createElement('p');
+                      const myList = document.createElement('ul');
+
+                      myH2.textContent = heroes[i].nombre;
+                      myPara2.textContent = 'Edad: ' + heroes[i].edad;
+                      myPara3.textContent = 'Caracteristicas:';
+
+                      const caracteristicaS = heroes[i].caracteristicas;
+                      for (var j = 0; j < caracteristicaS.length; j++) {
+                          const listItem = document.createElement('li');
+                          listItem.textContent = caracteristicaS[j];
+                          myList.appendChild(listItem);
+                      }
+
+                      myArticle.appendChild(myH2);
+                      myArticle.appendChild(myPara1);
+                      myArticle.appendChild(myPara2);
+                      myArticle.appendChild(myPara3);
+                      myArticle.appendChild(myList);
+
+                      section.appendChild(myArticle);
+                  }
+              }
+
+              request.open('GET', requestURL);
+              request.responseType = 'text'; // recibimos una cadena de tipo "string"
+              request.send();
+
+              request.onload = function () {
+                  const superHeroesText = request.response; // cogemos la cadena de response
+                  const superHeroes = JSON.parse(superHeroesText); // la convertimos a objeto
+                  populateHeader(superHeroes);
+                  showHeroes(superHeroes);
+              }
+
+              const myJSON = { "nombre": "Chris", "edad": "38" };
+              myJSON
+              const myString = JSON.stringify(myJSON);
+              myString
+
+          </script>
+  </body>
+</html>

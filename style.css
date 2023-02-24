@@ -1,0 +1,58 @@
+/* || general styles */
+*{
+  color: aliceblue;
+}
+html {
+    font-family: 'helvetica neue', helvetica, arial, sans-serif;
+    background-image: url(1920x1080-Pure-Black-Wallpaper-HD.jpg);
+}
+
+body {
+
+    width: 900px;
+    margin: 0 auto;
+    background-image: url(../back.jpg);
+}
+
+h1, h2 {
+  font-family: 'Gajraj One', cursive;
+  
+}
+
+/* header styles */
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: lime;
+}
+
+header p {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration-line: underline;
+  color: chartreuse;
+}
+
+/* section styles */
+
+section article {
+  width: 33%;
+  float: right;
+  
+}
+
+section p {
+  margin: 7px 20px;
+}
+
+section ul {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: -5px;
+  margin-bottom: 10px;
+}

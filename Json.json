@@ -1,0 +1,36 @@
+{
+  "titulo" : "DESARROLLO DE APLICACIONES EN LENGUAJES DE ÚLTIMA GENERACIÓN",
+  "Tema" : ".JSON",
+  "secretBase" : "Lenguajes Última Generación",
+  "active" : true,
+  "members" : [
+    {
+      "nombre" : "Nicolas Urbano",
+      "edad" : 23,
+      "caracteristicas" : [
+        "Analista",
+        "Deportista",
+        "Profesional"
+      ]
+    },
+    {
+      "nombre": "Juan Moreno",
+      "edad": 24,
+      "caracteristicas": [
+        "Deportista",
+        "Estudiante",
+        "Profesional"
+      ]
+    },
+    {
+      "nombre": "Cesar",
+      "edad": 25,
+      "caracteristicas": [
+        "Disciplinado",
+        "Analista",
+        "Deportista"
+      ]
+    }
+    
+  ]
+}
