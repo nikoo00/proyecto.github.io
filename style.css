@@ -48,7 +48,10 @@ section p {
 }
 
 section a {
-  border: solid; border-color:chartreuse; font-size: 150%; margin: 10px 363px;
+  border: solid;
+  border-color:chartreuse;
+  font-size: 150%;
+  margin: 10px 363px;
 }
 
 section ul {
