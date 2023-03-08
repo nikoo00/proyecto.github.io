@@ -47,6 +47,10 @@ section p {
   margin: 7px 20px;
 }
 
+section a {
+  border: solid; border-color:chartreuse; font-size: 150%; margin: 10px 363px;
+}
+
 section ul {
   margin-top: 0;
 }
